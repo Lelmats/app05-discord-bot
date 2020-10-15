@@ -1,8 +1,6 @@
 import Discord from 'discord.js';
-
+const {token} = require('./config.json');
 const client = new Discord.Client();
-
-const TOKEN_API = 'NzYyNzEyMjMzNzE2NzQ0MjYy.X3tJHw._oMjZRblfrnMQD0nGiiZ1L_-Sjg';
 
 client.on('ready', ()=>{
     console.log(`Bot logged at: ${client.user.tag}`);
@@ -18,4 +16,4 @@ client.on('message', message =>{
         message.reply('Nio');
     }
 });
-client.login(TOKEN_API);
+client.login(token);
